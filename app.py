@@ -19,6 +19,6 @@ def index():
     test();
   return "{Executer: Online}"
 
-def test:
+def test():
   return "It worked!"
 app.run(host='0.0.0.0', port=8080)

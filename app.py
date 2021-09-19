@@ -14,5 +14,4 @@ def index():
     print("Please fill out the required!");
   else:
     print(length);
-    execute();
   return render_template("index.html")

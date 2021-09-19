@@ -48,7 +48,7 @@ def execute():
     options.add_argument(f'user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36')
     driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH , chrome_options=options)
     driver.get("https://katacoda.com/embed/runpatrick/courses/challenges/node-challenge-1/?v=2&embed=true&ui=inline&host=137.184.30.68&url=http%3A%2F%2F137.184.30.68%2Ftest%2F%3Fhost%3D1&target=katacoda-scenario-1&nonce=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWJlZCI6dHJ1ZSwiZG9tYWluIjoiaHR0cDovLzEzNy4xODQuMzAuNjgvIiwiaXAiOiIyNC4yMjguMTA5LjI1NSIsImlhdCI6MTYzMTg2NTgzMiwiZXhwIjoxNjMxODY1ODYyfQ.DA-Sa33cRPy1IrloJNxqvIs37wotHl6KdSgyzCNYNPg&color=004d7f")
-    time.sleep(8)
+    time.sleep(7)
     url = driver.execute_script("return document.getElementById('weburl').innerText;")
     print(url)
     #Need to add request

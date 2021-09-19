@@ -1,2 +1,5 @@
 Flask==1.0.2
 gunicorn>=19.5.0
+selenium
+bs4
+requests

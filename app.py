@@ -9,11 +9,11 @@ def index():
   host = request.args.get('host')
   length = request.args.get('length')
   if host == None:
-    print("Please fill out the required!");
+    return("Please fill out the required!");
   else:
-    print(host);
+    return(host);
   if length == None:
-    print("Please fill out the required!");
+    return("Please fill out the required!");
   else:
-    print(length);
-  return "Hello Heruko"
+    return(length);
+  return "{Executer: Online}"

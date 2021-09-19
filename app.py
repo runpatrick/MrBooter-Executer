@@ -46,7 +46,7 @@ def execute():
   url = driver.execute_script("return document.getElementById('weburl').innerText;")
   print(url)
   headers = {
-      'authority': '2886795297-80-simba08.environments.katacoda.com',
+      'authority': host,
       'sec-ch-ua': '"Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"',
       'sec-ch-ua-mobile': '?0',
       'sec-ch-ua-platform': '"macOS"',

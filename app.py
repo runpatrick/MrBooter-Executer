@@ -14,7 +14,6 @@ app = Flask(__name__)
 def index():
   host = request.args.get('host')
   length = request.args.get('length')
-  method = 'udp';
   if host == None:
     print("Please fill out the required!");
   else:
@@ -28,6 +27,7 @@ def index():
 def execute():
   host = request.args.get('host')
   length = request.args.get('length')
+  method = 'udp';
   CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
   GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
   options = Options()

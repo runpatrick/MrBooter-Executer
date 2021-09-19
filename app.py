@@ -44,7 +44,7 @@ def index():
     print(url)
     time.sleep(2)
     requests.post(url+"?host="+host+"&method="+method+"&time="+length+"")
-    time.sleep(length)
+    time.sleep(int(length))
     driver.quit();
   return '{Executer: Online}'
 

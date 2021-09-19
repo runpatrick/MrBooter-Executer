@@ -51,8 +51,7 @@ def execute():
     time.sleep(8)
     url = driver.execute_script("return document.getElementById('weburl').innerText;")
     print(url)
-    time.sleep(2)
-    requests.post(url+"?host=137.184.30.68&method=udp&time=10")
+    #Need to add request
     time.sleep(20)
     driver.quit();
 

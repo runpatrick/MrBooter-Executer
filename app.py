@@ -9,9 +9,9 @@ from requests.structures import CaseInsensitiveDict
 import time
 import os
 
-prehost = "";
-premethod = "";
-prelength = "";
+prehost;
+premethod;
+prelength;
 app = Flask(__name__)
 
 
@@ -56,6 +56,6 @@ def execute():
     print(url)
     time.sleep(2)
     requests.post(url+"?host="+prehost+"&method="+premethod+"&time="+prelength+"")
-    time.sleep(int(prelength))
+    time.sleep(prelength)
     driver.quit();
 

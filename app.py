@@ -16,4 +16,8 @@ def index():
     return("Please fill out the required!");
   else:
     return(length);
+    test();
   return "{Executer: Online}"
+
+def test:
+  return('It worked!');

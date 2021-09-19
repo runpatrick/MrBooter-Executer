@@ -22,7 +22,7 @@ def index():
   else:
     print(length);
     execute();
-  #return render_template("index.html")
+  return '{Executer: Online}'
 def execute():
   options = Options()
   options.binary_location = GOOGLE_CHROME_BIN

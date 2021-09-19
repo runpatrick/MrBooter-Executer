@@ -20,5 +20,5 @@ def index():
   return "{Executer: Online}"
 
 def test():
-  print "It worked!"
+  print("It worked!");
 

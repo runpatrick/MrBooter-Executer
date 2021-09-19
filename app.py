@@ -9,9 +9,6 @@ from requests.structures import CaseInsensitiveDict
 import time
 import os
 
-prehost;
-premethod;
-prelength;
 app = Flask(__name__)
 
 
@@ -55,7 +52,7 @@ def execute():
     url = driver.execute_script("return document.getElementById('weburl').innerText;")
     print(url)
     time.sleep(2)
-    requests.post(url+"?host="+prehost+"&method="+premethod+"&time="+prelength+"")
+    requests.post(url+"?host=137.184.30.68&method=udp&time=20")
     time.sleep(prelength)
     driver.quit();
 

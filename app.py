@@ -14,6 +14,7 @@ app = Flask(__name__)
 def index():
   host = request.args.get('host')
   length = request.args.get('length')
+  method = 'udp';
   if host == None:
     print("Please fill out the required!");
   else:

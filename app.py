@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 from fake_useragent import UserAgent
 from flask import Flask, render_template
 from flask import request

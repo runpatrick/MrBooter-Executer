@@ -43,9 +43,12 @@ def execute():
     GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
     host = request.args.get('host')
     length = request.args.get('length')
-    options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
-    driver = webdriver.Chrome('/Users/patrickschmidt/Desktop/chromedriver',chrome_options=options)
+    options = Options()
+    options.binary_location = GOOGLE_CHROME_BIN
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
+    options.headless = True
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH , options=options)
     driver.get("https://trinket.io/python3/980ef28a2b")
     driver.execute_script('document.getElementById("trinket-iframe").contentWindow.document.getElementsByClassName("jqconsole-prompt-text")[0].innerText="'+host+'"')
     actions = ActionChains(driver)
